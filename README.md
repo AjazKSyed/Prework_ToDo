@@ -38,7 +38,8 @@ GIF created with [RecordIt](https://recordit.co/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+There were not any major challenges, but figuring out how to change the app icon was tricky.
+
 
 ## License
 
