@@ -26,18 +26,21 @@ public class EditActivity extends AppCompatActivity {
 
         etItem.setText(getIntent().getStringExtra(MainActivity.KEY_ITEM_TEXT));
 
+        // when user is finished editing task, they touch save
         btnSave.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
+                // creates intent that has new edited items
                 Intent intent = new Intent();
 
+                // passing in the new data
                 intent.putExtra(MainActivity.KEY_ITEM_TEXT, etItem.getText().toString());
                 intent.putExtra(MainActivity.KEY_ITEM_POSITION, getIntent().getExtras().getInt(MainActivity.KEY_ITEM_POSITION));
 
-
+                // setting result of intent
                 setResult(RESULT_OK, intent);
-
+                // finishing activity / closing screen to go back to mainactivity
                 finish();
             }
         });

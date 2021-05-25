@@ -44,11 +44,13 @@ public class MainActivity extends AppCompatActivity {
         rvItems = findViewById(R.id.rvItems);
 
         loadItems();
+
         itemsAdapter.OnLongClickListener OnLongClickListener = new itemsAdapter.OnLongClickListener() {
             @Override
             public void onItemLongClicked(int position) {
+                // deletes the item from the list
                 items.remove(position);
-
+                // notifies adapter and also updates adapter
                 ItemsAdapter.notifyItemRemoved(position);
                 Toast.makeText(getApplicationContext(), "Item was removed", Toast.LENGTH_SHORT).show();
                 saveItems();
@@ -60,12 +62,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClicked(int position) {
             Log.d("MainActivity", "Single click at position" + position);
-
+            // creates new activity
             Intent i = new Intent(MainActivity.this, EditActivity.class);
 
+            // passes the new data for editing
             i.putExtra(KEY_ITEM_TEXT, items.get(position));
             i.putExtra(KEY_ITEM_POSITION, position);
 
+            // displays the activity
             startActivityForResult(i, EDIT_TEXT_CODE);
 
             }
@@ -100,12 +104,14 @@ public class MainActivity extends AppCompatActivity {
 
             // get the position of the edited item
             int position = data.getExtras().getInt(KEY_ITEM_POSITION);
+
+            // update the list at the specific position with the new item
             items.set(position, itemTxt);
+            // notify the adapter
             ItemsAdapter.notifyItemChanged(position);
+            // keep the changes
             saveItems();
             Toast.makeText(getApplicationContext(), "Item updated successfully", Toast.LENGTH_SHORT).show();
-
-
         } else {
             Log.w("MainActivity", "Unknown call to onActivityResult");
         }
@@ -135,7 +141,4 @@ public class MainActivity extends AppCompatActivity {
             Log.e("MainActivity", "Error writing items", e);
         }
     }
-
-
-
 }
