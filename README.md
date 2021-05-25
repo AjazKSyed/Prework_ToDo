@@ -4,7 +4,7 @@
 
 Submitted by: **Ajaz Syed**
 
-Time spent: **5** hours spent in total
+Time spent: **6** hours spent in total
 
 ## User Stories
 
@@ -17,14 +17,24 @@ The following **required** functionality is completed:
 The following **optional** features are implemented:
 
 * [x] User can **tap a todo item in the list and bring up an edit screen for the todo item** and then have any changes to the text reflected in the todo list
+* [x] User sees app icon in home screen and styled launch screen.
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+User can view, add, edit, and remove items from the item list:
 
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
+<img src='http://g.recordit.co/ZVyKZK6xKv.gif' title='Video Walkthrough 1' width='' alt='Video Walkthrough1' />
+
+GIF created with [RecordIt](https://recordit.co/).
+
+
+User's list of items persisted upon modification and and retrieved properly on app restart: 
+
+<img src='http://g.recordit.co/FfHvtj97HV.gif' title='Video Walkthrough 2' width='' alt='Video Walkthrough2' />
+
+GIF created with [RecordIt](https://recordit.co/).
 
 ## Notes
 
