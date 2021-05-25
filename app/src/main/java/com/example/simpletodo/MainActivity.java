@@ -61,16 +61,16 @@ public class MainActivity extends AppCompatActivity {
         itemsAdapter.OnClickListener onClickListener = new itemsAdapter.OnClickListener() {
             @Override
             public void onItemClicked(int position) {
-            Log.d("MainActivity", "Single click at position" + position);
-            // creates new activity
-            Intent i = new Intent(MainActivity.this, EditActivity.class);
+                Log.d("MainActivity", "Single click at position" + position);
+                // creates new activity
+                Intent i = new Intent(MainActivity.this, EditActivity.class);
 
-            // passes the new data for editing
-            i.putExtra(KEY_ITEM_TEXT, items.get(position));
-            i.putExtra(KEY_ITEM_POSITION, position);
+                // passes the new data for editing
+                i.putExtra(KEY_ITEM_TEXT, items.get(position));
+                i.putExtra(KEY_ITEM_POSITION, position);
 
-            // displays the activity
-            startActivityForResult(i, EDIT_TEXT_CODE);
+                // displays the activity
+                startActivityForResult(i, EDIT_TEXT_CODE);
 
             }
         };
